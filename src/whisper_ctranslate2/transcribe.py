@@ -178,9 +178,9 @@ class Transcribe:
                         text = self._get_colored_text(segment.words)
                     else:
                         text = segment.text
-
+                        
                     if not live:
-                        line = f"[{format_timestamp(start)} --> {format_timestamp(end)}] {text}"
+                        line = f"{text}"
                         print(make_safe(line))
 
                 segment_dict = segment._asdict()
